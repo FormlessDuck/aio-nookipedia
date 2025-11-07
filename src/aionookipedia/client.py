@@ -1,10 +1,10 @@
 from aiohttp_client_cache.session import CachedSession
 import os
-from resources import Villager
-from resources import Recipe
-from resources import Event
+from aionookipedia.resources import Villager
+from aionookipedia.resources import Recipe
+from aionookipedia.resources import Event
 from dotenv import load_dotenv
-from resources.museum import (
+from aionookipedia.resources.museum import (
     Fish,
     Bug,
     SeaCreature,
@@ -13,7 +13,7 @@ from resources.museum import (
     FossilGroup,
     FossilSet
 )
-from resources.items import (
+from aionookipedia.resources.items import (
     Clothing, 
     Furniture,
     InteriorItem,
