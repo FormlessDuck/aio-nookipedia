@@ -1,5 +1,5 @@
 import asyncio
-from client import NookClient 
+from aionookipedia.client import NookClient 
 import time
 
 # async def getVillagersBySpecies(species: str):

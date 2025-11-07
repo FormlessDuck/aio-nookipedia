@@ -28,10 +28,10 @@ load_dotenv()
 
 class NookClient:
 
-    def __init__(self, baseUrl = "https://api.nookipedia.com"):
+    def __init__(self, apiKey = os.getenv("API_KEY,"), baseUrl = "https://api.nookipedia.com"):
         self.baseUrl = baseUrl
         self.session = CachedSession(expire_after=21600) #Cache expires after 6 hours
-        self.apiKey = os.getenv("API_KEY")
+        self.apiKey = apiKey
 
     async def __aenter__(self):
         return self
