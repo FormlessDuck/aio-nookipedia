@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aio-nookipedia"
+version = "0.1.1"
+authors = [
+  {name = "FormlessDuck"},
+]
+description = "A simple, easy to use python wrapper for the Nookipedia API"
+readme = "README.md"
+requires-python = ">=3.13.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "aiohttp-client-cache"
+]
+license = "WTFPL"
+license-files = ["LICEN[CS]E*"]
