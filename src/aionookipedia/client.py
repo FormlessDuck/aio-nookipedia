@@ -3,7 +3,7 @@ import os
 from aionookipedia.resources import Villager
 from aionookipedia.resources import Recipe
 from aionookipedia.resources import Event
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 from aionookipedia.resources.museum import (
     Fish,
     Bug,
@@ -24,7 +24,7 @@ from aionookipedia.resources.items import (
 )
 
 apiVersion = "1.7.0"
-load_dotenv()
+load_dotenv(find_dotenv())
 
 class NookClient:
 
