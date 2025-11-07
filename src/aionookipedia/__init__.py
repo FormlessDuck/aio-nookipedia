@@ -1,5 +1,6 @@
 from .client import NookClient 
-from resources import *
+from .resources import *
+
 
 __title__ = "aio-nookipedia"
 __author__ = "FormlessDuck"
