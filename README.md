@@ -9,8 +9,21 @@ The wrapper can be installed via pip using
 `pip install aio-nookipedia`
 
 ## General Usage:
-Every endpoint in the API is accessible through the `get` functions inside `NookClient` found in [client.py](src/aionookipedia\client.py)
+Every endpoint in the API is accessible through the `get` functions inside `NookClient` found in [client.py](https://github.com/FormlessDuck/aio-nookipedia/blob/main/src/aionookipedia/client.py)
 These functions each return an object or list of objects containing all the data stored in the API.
+
+Example Usage:
+```python
+import asyncio
+from aionookipedia.client import NookClient 
+        
+async def main():
+    async with NookClient("API_KEY") as client:
+        data = await client.getFish('pike')
+        print(data.name) # will return "Pike"
+
+asyncio.run(main())
+```
 
 Most attributes (eg. name, species, rarity, etc.) follow the same naming scheme as the API. The only exception to this is the "from" attribute in the `Availability` object that is stored in items. Since `from` is a keyword in Python, this can be accessed with .availability.location instead.
 
@@ -26,18 +39,7 @@ async def getFurnitureByLocation(client, location: str):
 
 There is also a custom object called `FossilSet` that accesses an endpoint containing the `FossilGroup` objects with their respective fossils. I modified the objects stored here to contain an array of `Fossil` objects that are identical to the objects at the "Single New Horizons Fossil" endpoint.
 
-Example Usage:
-```python
-import asyncio
-from aionookipedia.client import NookClient 
-        
-async def main():
-    async with NookClient("API_KEY") as client:
-        data = await client.getFish('pike')
-        print(data.name) # will return "Pike"
 
-asyncio.run(main())
-```
 For security in your own project, it is best if you use `python-dotenv` to load your api key, but you can pass the api key into `NookClient()` 
 manually if you wish.
 
