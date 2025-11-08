@@ -46,7 +46,6 @@ manually if you wish.
 
 ### Requirements
 Python >= 3.13.7
-
 [aiohttp-client-cache](https://aiohttp-client-cache.readthedocs.io/en/stable/user_guide.html)
 
 
