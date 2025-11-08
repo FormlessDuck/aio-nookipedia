@@ -1,9 +1,7 @@
 from aiohttp_client_cache.session import CachedSession
-import os
 from aionookipedia.resources import Villager
 from aionookipedia.resources import Recipe
 from aionookipedia.resources import Event
-from dotenv import load_dotenv, find_dotenv
 from aionookipedia.resources.museum import (
     Fish,
     Bug,
@@ -24,11 +22,11 @@ from aionookipedia.resources.items import (
 )
 
 apiVersion = "1.7.0"
-load_dotenv(find_dotenv())
+
 
 class NookClient:
-
-    def __init__(self, apiKey = os.getenv("API_KEY,"), baseUrl = "https://api.nookipedia.com"):
+    
+    def __init__(self, apiKey = None, baseUrl = "https://api.nookipedia.com"):
         self.baseUrl = baseUrl
         self.session = CachedSession(expire_after=21600) #Cache expires after 6 hours
         self.apiKey = apiKey

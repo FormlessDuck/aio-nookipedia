@@ -1,7 +1,9 @@
 import asyncio
 from aionookipedia.client import NookClient 
-import time
+from dotenv import load_dotenv
+import os
 
+#Emaxple Usage:
 # async def getVillagersBySpecies(species: str):
 #     data = await client.getAllVillagers()
 #     villagers = []
@@ -11,10 +13,11 @@ import time
 #         else:
 #             continue
 #     return villagers
-    
-      
+        
 async def main():
-    async with NookClient() as client:
+    load_dotenv()
+    apiKey = os.getenv("API_KEY")
+    async with NookClient(apiKey) as client:
         data = await client.getFish('pike')
         print(data.name)
 
