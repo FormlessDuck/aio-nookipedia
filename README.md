@@ -18,7 +18,7 @@ import asyncio
 from aionookipedia.client import NookClient 
         
 async def main():
-    async with NookClient("API_KEY") as client:
+    async with NookClient("YOUR_API_KEY") as client:
         data = await client.getFish('pike')
         print(data.name) # will return "Pike"
 
