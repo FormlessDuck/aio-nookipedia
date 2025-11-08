@@ -3,7 +3,7 @@ from aionookipedia.client import NookClient
 from dotenv import load_dotenv
 import os
 
-#Emaxple Usage:
+#Example Usage:
 # async def getVillagersBySpecies(species: str):
 #     data = await client.getAllVillagers()
 #     villagers = []
