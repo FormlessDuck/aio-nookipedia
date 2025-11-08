@@ -45,8 +45,11 @@ manually if you wish.
 
 
 ### Requirements
-Python >= 3.13.7
-[aiohttp-client-cache](https://aiohttp-client-cache.readthedocs.io/en/stable/user_guide.html)
+- Python >= 3.13.7
+- [aiohttp-client-cache](https://aiohttp-client-cache.readthedocs.io/en/stable/user_guide.html)
+
+### Issues and Feature Requests
+If you have any issues using the wrapper, or want to request a new feature, feel free to use the issue system on [GitHub](https://github.com/FormlessDuck/aio-nookipedia/issues/new)
 
 
 
