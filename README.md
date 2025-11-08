@@ -1,5 +1,5 @@
 # AIO-Nookipedia
-A simple, all-in-one python wrapper for the Nookipedia API
+A simple, all-in-one python wrapper for the Nookipedia API with caching
 
 Nookipedia is a community-driven Animal Crossing wiki.
 The main page of the Nookipedia wiki can be found [here](https://nookipedia.com/wiki/Main_Page).
