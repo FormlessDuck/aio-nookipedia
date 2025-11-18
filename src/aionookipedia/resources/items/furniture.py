@@ -1,6 +1,29 @@
 from .item import Item
 
 class Furniture(Item):
+    __slots__ = (
+        "item_series",
+        "item_set",
+        "themes",
+        "hha_category",
+        "hha_base",
+        "tag",
+        "lucky",
+        "lucky_season",
+        "variation_total",
+        "pattern_total",
+        "customizable",
+        "custom_kits",
+        "custom_kit_type",
+        "custom_body_part",
+        "custom_pattern_part",
+        "grid_width",
+        "grid_length",
+        "height",
+        "door_decor",
+        "functions",
+        "notes"
+    )
     def __init__(self, data: dict):
         super().__init__(data)
         self.item_series = data['item_series']

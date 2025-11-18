@@ -1,6 +1,18 @@
 from .item import Item
 
 class InteriorItem(Item):
+    __slots__ = (
+        "image_url",
+        "item_series",
+        "item_set",
+        "themes",
+        "hha_category",
+        "hha_base",
+        "tag",
+        "grid_width",
+        "grid_length",
+        "colors"
+    )
     def __init__(self, data: dict):
         super().__init__(data)
         self.image_url = data['image_url']

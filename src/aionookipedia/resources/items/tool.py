@@ -1,6 +1,13 @@
 from .item import Item
 
 class Tool(Item):
+    __slots__ = (
+        "uses",
+        "hha_base",
+        "customizable",
+        "custom_kits",
+        "custom_body_part"
+    )
     def __init__(self, data: dict):
         super().__init__(data)
         self.uses = data['uses']

@@ -1,6 +1,17 @@
 from .item import Item
 
 class Gyroid(Item):
+    __slots__ = (
+        "hha_base",
+        "customizable",
+        "custom_kits",
+        "custom_body_part",
+        "cyrus_price",
+        "variation_total",
+        "grid_width",
+        "grid_length",
+        "sound"
+    )
     def __init__(self, data: dict):
         super().__init__(data)
         self.hha_base = data['hha_base']

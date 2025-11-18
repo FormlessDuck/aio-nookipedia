@@ -1,6 +1,19 @@
 from .item import Item
 
 class MiscItem(Item):
+    __slots__ = (
+        "image_url",
+        "stack",
+        "hha_base",
+        "is_fence",
+        "material_type",
+        "material_seasonality",
+        "material_sort",
+        "material_name_sort",
+        "material_seasonailty_sort",
+        "edible",
+        "plant_type"
+    )
     def __init__(self, data: dict):
         super().__init__(data)
         self.image_url = data['image_url']

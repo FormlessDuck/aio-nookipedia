@@ -1,4 +1,21 @@
 class Artwork:
+    __slots__ = (
+        "name",
+        "url",
+        "has_fake",
+        "art_name",
+        "art_type",
+        "author",
+        "year",
+        "art_style",
+        "buy",
+        "sell",
+        "availability",
+        "width",
+        "length",
+        "real_info",
+        "fake_info"
+    )
     def __init__(self, data: dict):
         self.name = data['name']
         self.url = data['url']
@@ -17,6 +34,11 @@ class Artwork:
         self.fake_info = ArtworkInfo(data['fake_info']) if self.has_fake else None
 
 class ArtworkInfo:
+    __slots__ = (
+        "image_url",
+        "texture_url",
+        "description"
+    )
     def __init__(self, data: dict):
         self.image_url = data['image_url']
         self.texture_url = data['texture_url']

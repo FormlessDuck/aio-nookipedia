@@ -1,4 +1,16 @@
 class Fossil:
+    __slots__ = (
+        "name",
+        "url",
+        "image_url",
+        "fossil_group",
+        "interactable",
+        "sell",
+        "hha_base",
+        "width",
+        "length",
+        "colors"
+    )
     def __init__(self, data: dict):
         self.name = data['name']
         self.url = data['url']
@@ -12,6 +24,12 @@ class Fossil:
         self.colors = data['colors']
 
 class FossilGroup:
+    __slots__ = (
+        "name",
+        "url",
+        "room",
+        "description"
+    )
     def __init__(self, data: dict):
         self.name = data['name']
         self.url = data['url']
@@ -19,6 +37,13 @@ class FossilGroup:
         self.description = data['description']
 
 class FossilSet:
+    __slots__ = (
+        "name",
+        "url",
+        "room",
+        "description",
+        "fossils"
+    )
     def __init__(self, data: dict):
         self.name = data['name']
         self.url = data['url']

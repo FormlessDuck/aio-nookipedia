@@ -1,6 +1,14 @@
 from .item import Item
 
 class Clothing(Item):
+    __slots__ = (
+        "variation_total",
+        "vill_equip",
+        "seasonality",
+        "notes",
+        "label_themes",
+        "styles"
+    )
     def __init__(self, data: dict):
         super().__init__(data)
         self.variation_total = data['variation_total']

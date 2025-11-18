@@ -1,4 +1,29 @@
+
 class Villager:
+    __slots__ = (
+        "id",
+        "url",
+        "name",
+        "alt_name",
+        "title_color",
+        "text_color",
+        "image_url",
+        "species",
+        "personality",
+        "gender",
+        "birthday_day",
+        "birthday_month",
+        "sign",
+        "quote",
+        "phrase",
+        "prev_phrases",
+        "clothing",
+        "islander",
+        "debut",
+        "appearances",
+        "nh_details",
+        "birthday"
+    )
     def __init__(self, data: dict):
         self.id = data["id"]
         self.url = data["url"]
@@ -28,6 +53,25 @@ class Villager:
 
       
 class NHDetails:
+    __slots__ = (
+        "photo_url",
+        "image_url",
+        "icon_url",
+        "quote",
+        "sub_personality",
+        "catchphrase",
+        "clothing",
+        "clothing_variation",
+        "fav_styles",
+        "hobby",
+        "house_interior_url",
+        "house_exterior_url",
+        "house_wallpaper",
+        "house_flooring",
+        "house_music",
+        "house_music_note",
+        "umbrella"
+    )
     def __init__(self, data: dict):
         self.photo_url = data["photo_url"]
         self.image_url = data["image_url"]

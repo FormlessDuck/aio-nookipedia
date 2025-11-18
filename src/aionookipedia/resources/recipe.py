@@ -2,6 +2,15 @@ from .items.item import Prices
 from .items.item import Availability
 
 class Recipe:
+    __slots__ = (
+        "name",
+        "url",
+        "image_url",
+        "serial_id",
+        "buy",
+        "availability",
+        "materials"
+    )
     def __init__(self, data: dict):
         self.name = data['name']
         self.url = data['url']
@@ -21,6 +30,10 @@ class Recipe:
         self.materials = materials
 
 class Material:
+    __slots__ = (
+        "name",
+        "count"
+    )
     def __init__(self, data: dict):
         self.name = data['name']
         self.count = data['count']

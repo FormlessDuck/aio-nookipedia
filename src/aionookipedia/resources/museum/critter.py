@@ -1,4 +1,17 @@
 class Critter:
+    __slots__ = (
+        "url",
+        "name",
+        "image_url",
+        "catchphrases",
+        "rarity",
+        "total_catch",
+        "sell_nook",
+        "tank_width",
+        "tank_length",
+        "north",
+        "south"
+    )
     def __init__(self, data: dict):
         self.url = data["url"]
         self.name = data["name"]
@@ -13,6 +26,12 @@ class Critter:
         self.south = HemisphereDetails(data["south"])
 
 class HemisphereDetails:
+    __slots__ = (
+        "availabiliy_array",
+        "months",
+        "times_by_month",
+        "months_array"
+    )
     def __init__(self, data: dict):
         self.availabiliy_array = []
         for x in data["availability_array"]:
@@ -24,6 +43,10 @@ class HemisphereDetails:
     
 
 class AvailabilityDetails:
+    __slots__ = (
+        "months",
+        "time"
+    )
     def __init__(self, data: dict):
         self.months = data["months"]
         self.time = data["time"]

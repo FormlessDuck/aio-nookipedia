@@ -1,6 +1,14 @@
 from .item import Item
 
 class Photo(Item):
+    __slots__ = (
+        "customizable",
+        "custom_kits",
+        "custom_body_part",
+        "grid_width",
+        "grid_length",
+        "interactable"
+    )
     def __init__(self, data: dict):
         super().__init__(data)
         self.customizable = data['customizable']
