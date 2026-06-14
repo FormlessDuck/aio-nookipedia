@@ -20,9 +20,9 @@ async def main():
     apiKey = os.getenv("API_KEY")
     start_time = time.time()
     async with NookClient(apiKey) as client:
-        data = await client.getAllVillagers()
-        for x in data:
-            print(x.name)
+        data = await client.getVillager("mineru")
+        for x in type(data).__slots__:
+            print(getattr(data, x))
         end_time = time.time()
         print(f"Execution Time: {end_time - start_time} seconds")
         

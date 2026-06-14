@@ -21,8 +21,7 @@ class Villager:
         "islander",
         "debut",
         "appearances",
-        "nh_details",
-        "birthday"
+        "nh_details"
     )
     def __init__(self, data: dict):
         self.id = data["id"]
